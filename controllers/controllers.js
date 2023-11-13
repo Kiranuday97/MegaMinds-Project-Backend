@@ -86,7 +86,7 @@ exports.addProductController = async (req, res) => {
   try {
     const { name, price, category } = req.body;
     const imageUrl = req.file.path; 
-    const seller = req.userId; 
+    
 
 
     const product = new Products({
@@ -94,7 +94,7 @@ exports.addProductController = async (req, res) => {
       price,
       imageUrl,
       category,
-      seller,
+      
     });
 
     await product.save();

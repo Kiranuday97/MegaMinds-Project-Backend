@@ -84,7 +84,7 @@ router.post("/login", doLogin);
 
 router.get("/test", requireSignIn, testController);
 
-router.post("/add-product",  upload.single('image'),requireSignIn, extractUserId,   addProductController);
+router.post("/add-product",  upload.single('image'),  addProductController);
 
 router.get("/fetch-products", fetchProductController);
 
