@@ -18,10 +18,7 @@ const PORT = process.env.PORT || 5000;
 
 databaseConfiguration();
 
-app.use(cors({
-  origin: ["http://localhost:3000", "http://megaminds-project.onrender.com"],
-}
-));
+app.use(cors({ origin: 'https://megaminds-project.onrender.com' }));
 
 
 app.use(express.json({ extended: false }));
